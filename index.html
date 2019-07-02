@@ -4,6 +4,7 @@
     <title>
       Anant Rungta - Full Stack Developer
     </title>
+    <meta property="og:image" content="./img/anu.webp" />
     <meta http-equiv="Cache-control" content="public" />
     <meta name="description" content="Anant - Full Stack Developer" />
     <meta
@@ -24,11 +25,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
     />
   </head>
+
   <body id="particles-js">
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        $('[data-toggle="popover"]').popover({
+          placement: "top",
+          trigger: "hover"
+        });
+      });
+    </script>
     <!--------------------------------------------------body------------------------------------------>
     <a
       class="github-corner"
-      href="https://github.com/Anant016/me/blob/master/README.md"
+      href="https://github.com/Anant016/Free-swags/blob/master/README.md"
       style="position: absolute; top: 0; right: 0"
       aria-label="View source on Github"
       ><svg
@@ -80,19 +90,38 @@
       </div>
       <br />
       <div class="icons">
-        <a href="https://github.com/Anant016" target="_blank"
-          ><i class="fab fa-github icon icon-g mr-3 zoom"></i
-        ></a>
+     </a
+        >
         <a
-          href="./img/Anant_Resume.pdf"
-          download="Anant Resume.pdf"
+          href="https://github.com/Anant016"
+          data-toggle="popover"
+          data-trigger="hover"
+          title="Github"
+          data-content="And here's some amazing content. It's very engaging. Right?"
           target="_blank"
+          ><i class="fab fa-github icon icon-c mr-3 zoom"></i
+        ></a>
+
+        <a
+        data-toggle="popover"
+        data-trigger="hover"
+        title="Linkedin"
+          href="https://www.linkedin.com/in/anant-rungta-427315136/"
+          target="_blank"
+          ><i class="fab fa-linkedin icon icon-g mr-3 zoom"></i
+        ></a>
+
+        <a href="./img/Anant_Resume1.pdf" data-toggle="popover"
+        data-trigger="hover"
+        title="Resume" target="_blank"
           ><i class="far fa-file-pdf icon icon-d mr-3 zoom"></i
         ></a>
-        <a
-          href="https://drive.google.com/drive/folders/1FLNqo6OSpS3RtPyIRE-kFC6RCKuGqT20?usp=sharing"
-          target="_blank"
-          ><i class="fas fa-medal icon icon-c zoom"></i
+
+        <a href="https://medium.com/coolanant999" target="_blank"
+        data-toggle="popover"
+        data-trigger="hover"
+        title="Medium"
+          ><i class="fab fa-medium icon icon-b mr-3 zoom"></i
         ></a>
       </div>
       <br />
@@ -121,6 +150,10 @@
       integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"
     ></script>
     <script async>
+      $(function() {
+        $('[data-toggle="popover"]').popover();
+      });
+
       $(function() {
         $(window)
           .on("resize", function resize() {
@@ -169,6 +202,9 @@
   }
   .icon-c:hover {
     color: rgb(188, 165, 247);
+  }
+  .icon-b:hover {
+    color: black;
   }
   .zoom {
     transform: transform 0.2s;
